@@ -10,8 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <!-- <link href="img/favicon.ico" rel="icon"> -->
-    <link rel="stylesheet" href="{% static 'img/favicon.ico' %}" rel="icon">
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,24 +21,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <!-- <link href="lib/animate/animate.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+   <!-- Libraries Stylesheet -->
+   <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+   <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+   <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
-    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-
-    <!-- <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-
-
-    <!-- Customized Bootstrap Stylesheet -->
+   <!-- Customized Bootstrap Stylesheet -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Template Stylesheet -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -75,7 +66,7 @@
                     <small>+225 07 11 26 56 63 </small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">CONNEXION<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href="{% url 'connexion' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">CONNEXION<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </div>
         </div>
@@ -93,8 +84,8 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="" class="nav-item nav-link active">Accueil</a>
             <a href="" class="nav-item nav-link">A Propos de Nous</a>
-            <a href="" class="nav-item nav-link">Services</a>
-            <a href="" class="nav-item nav-link">Contacts</a>
+            <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+            <a href="{% url 'contact' %}" class="nav-item nav-link">Contacts</a>
         </div>
         <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="background-color: #1B75BC; color: #ffffff;">Je suis un PRO<i class="fa fa-arrow-right ms-3"></i></a>
     </nav>
@@ -105,12 +96,12 @@
             <h1 class="text-green-custom text-2xl font-bold">SUIVI DE DEMANDE DE SERVICE</h1>
             <div class="flex justify-center items-center space-x-10 mt-4">
                 <div class="flex items-center space-x-2">
-                    <div class="bg-green-custom text-white rounded-full w-8 h-8 flex items-center justify-center" style="position: relative; left: 16px">1</div>
+                    <div class="bg-secondary-custom text-secondary-custom rounded-full w-8 h-8 flex items-center justify-center" style="position: relative; left: 16px">1</div>
                     <span style="position: relative; left: 20px">Besoin</span>
                 </div>
                 <div class="border-t-2 border-secondary-custom flex-1"></div>
                 <div class="flex items-center space-x-2">
-                    <div class="bg-secondary-custom text-secondary-custom rounded-full w-8 h-8 flex items-center justify-center">2</div>
+                    <div class="bg-green-custom text-white rounded-full w-8 h-8 flex items-center justify-center">2</div>
                     <span>Localisation</span>
                 </div>
                 <div class="border-t-2 border-secondary-custom flex-1"></div>
@@ -124,40 +115,40 @@
 
     <div class="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg">
         <div class="flex items-center space-x-4 mb-4">
-            <img src="https://placehold.co/50" alt="User Avatar" class="rounded-full">
-            <p class="bg-secondary-custom p-4 rounded-lg flex-1" style="border-radius: 30px;">Vous cherchez un artisan ? Vous êtes au bon endroit. Écrivez-nous votre besoin.</p>
+            <img src="{% static 'img/user_avatar.png' %}" alt="User Avatar" class="rounded-full">
+            <p class="bg-secondary-custom p-4 rounded-lg flex-1" style="border-radius: 30px;">Ajoutez votre localisation pour être facilement trouvé et profiter de nos services.</p>
         </div>
 
-        <form class="space-y-4" action="{% url 'commande1' %}" method="post" >
+        <form class="space-y-4" action="{% url 'commande2' %}" method="post">
             <div>
-                <label class="block text-secondary-custom">Nom et prénom</label>
-                <input type="text" class="w-full border border-green-custom rounded-lg p-4" placeholder="Nom et prénom" name="name" required>
+                <label class="block text-secondary-custom">Adresse</label>
+                <input type="text" class="w-full border border-green-custom rounded-lg p-4" placeholder="Adresse" name="address">
             </div>
             <div>
-                <label class="block text-secondary-custom">Ecrivez votre demande  </label>
-                <input type="text" class="w-full border border-green-custom rounded-lg p-4" placeholder="Ecrivez votre demande" name="demande" required>
-            </div>
-            <div>
-                <label class="block text-secondary-custom">Mentionner votre délai</label>
-                <select name="delai" class="w-full border border-green-custom bg-white rounded-lg p-4">
-                    <option value="30 minutes">30 minutes</option>
-                    <option value="1 heure">1 heure</option>
-                    <option value="2 heures">2 heures</option>
-                    <option value="1 jour">1 jour</option>
-                    <option value="2 jours">2 jours</option>
-                    <option value="5 jours">5 jours</option>
+                <label class="block text-secondary-custom">Ville de résidence</label>
+                <select name="ville" class="w-full border border-green-custom bg-white rounded-lg p-4" name="ville">
+                    <option value="Abidjan">Abidjan</option>
+                    <option value="Yamoussoukro">Yamoussoukro</option>
+                    <option value="Bouake">Bouake</option>
+                    <option value="Daloa">Daloa</option>
+
+                    <option value="San-Pedro">San-Pedro</option>
+                    <option value="San-Rémi">San-Rémi</option>
+                    <option value="Sassandra">Sassandra</option>
+                    <option value="Soubre">Soubre</option>
+                    <option value="Toumodi">Toumodi</option>
                 </select>
             </div>
             <div>
-                <label class="block text-secondary-custom">Mentionner votre date et heure</label>
-                <input type="datetime-local" class="w-full border border-green-custom rounded-lg p-4" name="heure"  min="2024-01-01T00:00" required>
+                <label class="block text-secondary-custom">Email</label>
+                <input type="text" class="w-full border border-green-custom rounded-lg p-4" placeholder="ayitou008@gmail.com" name="email">
             </div>
             <div>
-                <label class="block text-secondary-custom">ecrivez votre Objectif</label>
-                <textarea  class="w-full border border-green-custom rounded-lg p-4" placeholder="ecrivez votre Objectif"name="objectif" required></textarea>
+                <label class="block text-secondary-custom">Numéro de téléphone</label>
+                <input type="text" class="w-full border border-green-custom rounded-lg p-4" placeholder="0700998866" name="tel">
             </div>
             {% csrf_token %}
-            <button type="submit" class="w-full bg-green-custom text-white py-4 rounded-lg p-4" value="Submit">Suivant</button>
+            <button type="submit" class="w-full bg-green-custom text-white py-4 rounded-lg p-4">Suivant</button>
         </form>
     </div>
 
@@ -233,34 +224,16 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- <script src="lib/wow/wow.min.js"></script> -->
 <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
 
-<!-- <script src="lib/easing/easing.min.js"></script> -->
-<script src="{% static 'lib/easing/easing.min.js' %}"></script>
-
-<!-- <script src="lib/waypoints/waypoints.min.js"></script> -->
-<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-
-<!-- <script src="lib/counterup/counterup.min.js"></script> -->
-<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-
-<!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
-<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-
-
-<!-- <script src="lib/isotope/isotope.pkgd.min.js"></script> -->
-<script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
-
-<!-- <script src="lib/lightbox/js/lightbox.min.js"></script> -->
-<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-
-
-<!-- Template Javascript -->
-<!-- <script src="js/main.js"></script> -->
-<script src="{% static 'js/main.js' %}"></script>
-
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
