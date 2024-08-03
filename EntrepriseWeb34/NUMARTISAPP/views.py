@@ -4,25 +4,29 @@ from NUMARTISAPP.models import DemandeService1
 # Create your views here.
 
 
-
-
 def index(request):
     return render(request, 'index.html')
+
 
 def services(request):
     return render(request, 'Services.html')
 
+
 def contact(request):
     return render(request, 'contact.html')
+
 
 def devis(request):
     return render(request, 'devis.html')
 
+
 def inscription(request):
     return render(request, 'inscription.html')
 
+
 def connexion(request):
-    return render(request, 'deconnexion.html')
+    return render(request, 'connexion.html')
+
 
 def commande1(request):
     if request.method == 'POST':
@@ -64,35 +68,53 @@ def commande2(request):
     return render(request, 'commande2.html')
 
 
-
 def commande3(request):
     if request.method == 'POST':
         budget = request.POST.get('budget')
         availability = request.POST.get('availability')
+        print(f"Budget: {budget}, Availability: {availability}")
+        
         # Récupérer les données stockées dans la session
         commande_data = request.session.get('commande_data')
         commande_data1 = request.session.get('commande_data1')
+        
         if not commande_data or not commande_data1:
-            # Si aucune donnée n'est trouvée dans la session, rediriger vers la première page
+            print("Données de session manquantes, redirection vers commande1")
             return redirect('commande1')
-        # Déterminer le contact_info en fonction de la disponibilité
-        contact_info = commande_data1['email'] if availability == 'oui' else commande_data1['tel']
-        # Mettre à jour les données de la commande avec les informations de commande3
-        commande_data.update(commande_data1)
-        commande_data.update({
-            'budget': budget,
-            'availability': availability,
-            'contact_info': contact_info
-        })
-        # Sauvegarder toutes les données dans la base de données
-        commend = DemandeService1.objects.create(**commande_data)
-        commend.save()
-        # Nettoyer la session
-        del request.session['commande_data']
-        del request.session['commande_data1']
-        return HttpResponse("Commande complétée avec succès!")
+        
+        try:
+            # Déterminer la disponibilité en fonction de la valeur
+            indisponibilite = availability == 'non'
+            
+            # Mettre à jour les données de la commande avec les informations de commande3
+            commande_data.update(commande_data1)
+            commande_data.update({
+                'budget': budget,
+                'indisponibilite': indisponibilite,
+            })
+            
+            # Sauvegarder toutes les données dans la base de données
+            commend = DemandeService1.objects.create(**commande_data)
+            commend.save()
+            
+            print("Commande sauvegardée avec succès!")
+            
+            # Nettoyer la session
+            del request.session['commande_data']
+            del request.session['commande_data1']
+            
+            return render(request, 'index.html')
+        except Exception as e:
+            print(f"Erreur lors de la création de la commande: {e}")
+            return HttpResponse(f"Erreur: {e}", status=500)
+    
     return render(request, 'commande3.html')
+
 
 
 def PLATFORME(request):
     return render(request, 'PLATFORME.html')
+
+
+def Apropos(request):
+    return render(request, 'Apropos.html')

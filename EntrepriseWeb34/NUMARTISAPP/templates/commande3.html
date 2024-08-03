@@ -114,7 +114,7 @@
                     <span class="mt-2">Validation</span>
                 </div>
             </div>
-            <form>
+            <form method="post" action="{% url 'commande3' %}">
                 <div class="flex items-center space-x-4 mb-4">
                     <img src="{% static 'img/girl.png' %}" alt="User Avatar" class="w-12 h-12 rounded-full">
                     <p class="bg-secondary-custom p-4 rounded-full flex-1">Vous êtes sur le point de valider votre demande de service.</p>

@@ -322,21 +322,19 @@ class DemandeService1(models.Model):
         ('Sassandra', 'Sassandra'),
         ('Soubre', 'Soubre'),
         ('Toumodi', 'Toumodi'),
-        
     ]
-    # question3 = models.CharField(max_length=100, blank=False, null=True)
+
     name = models.CharField(max_length=100, blank=False, null=True)
     demande = models.CharField(max_length=100, blank=False, null=True)
     delai = models.CharField(max_length=100, choices=DURATION_CHOICES, blank=False, null=True)
-    heure = models.DateTimeField(auto_now_add=True,blank=False, null=True)
+    heure = models.DateTimeField(auto_now_add=True, blank=False, null=True)
     address = models.CharField(max_length=100, blank=False, null=True)
     ville = models.CharField(max_length=100, choices=ville_CHOICES, blank=False, null=True)
     email = models.EmailField(blank=False, null=True)
     tel = models.CharField(max_length=20, blank=False, null=True)
-    budget= models.DecimalField(decimal_places=2, max_digits=20000000, blank=False, null=True)
-    indisponibilite=models.BooleanField(default=True, null=False,blank=False)
+    budget = models.DecimalField(decimal_places=2, max_digits=10, blank=False, null=True)
+    indisponibilite = models.BooleanField(default=True, null=False, blank=False)
 
     def __str__(self):
-        return f" {self.name}, {self.demande}, {self.delai},{self.heure}, {self.address}, {self.ville}, {self.email}, {self.tel}"
-     
-    
+        return f"{self.name}, {self.demande}, {self.delai}, {self.heure}, {self.address}, {self.ville}, {self.email}, {self.tel}"
+
