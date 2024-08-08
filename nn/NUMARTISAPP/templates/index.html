@@ -1,0 +1,403 @@
+{% extends "base.html" %} 
+
+{% load static %}
+
+{% block content %}
+
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0 pb-5">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div id="Accueil" class="col-12 col-lg-8 text-center">
+                                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">BIENVENUE SUR NUMARTIS-CI</h5>
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">Trouvez votre artisan de confiance </h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Notre priorité :  que vos travaux se passent vite et Bien. <br> Et ça marche :  97% de clients satisfaits!
+
+                                    </p>
+                                    <a href="{% url 'Apropos' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">En Savoir plus</a>
+                                    <a href="{% url 'devis' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Devis Gratuit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-lg-8 text-center">
+                                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">BIENVENUE SUR NUMARTIS-CI</h5>
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">Trouvez votre artisan de confiance </h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Notre priorité :  que vos travaux se passent vite et Bien. <br> Et ça marche :  97% de clients satisfaits!
+
+                                    </p>
+                                    <a href="{% url 'Apropos' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">En Savoir plus</a>
+                                    <a href="{% url 'devis' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Devis Gratuit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="{% static 'img/carousel-3.jpg' %}" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-lg-8 text-center">
+                                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">BIENVENUE SUR NUMARTIS-CI</h5>
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">Trouvez votre artisan de confiance </h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Notre priorité :  que vos travaux se passent vite et Bien. <br> Et ça marche :  97% de clients satisfaits!
+                                    </p>
+                                    <a href="{% url 'Apropos' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">En Savoir plus</a>
+                                    <a href="{% url 'devis' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Devis Gratuit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+
+        <!-- Feature Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                                <i class="fa fa-user-check fa-2x" style="color: #009540;"></i>
+                            </div>
+                            <h1 class="display-1 text-light mb-0">01</h1>
+                        </div>
+                        <h5>Creative Designers</h5>
+                    </div>
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                                <i class="fa fa-check fa-2x" style="color: #009540;"></i>
+                            </div>
+                            <h1 class="display-1 text-light mb-0">02</h1>
+                        </div>
+                        <h5>Qualité d'artisan</h5>
+                    </div>
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                                <i class="fa fa-drafting-compass fa-2x" style="color: #009540;"></i>
+                            </div>
+                            <h1 class="display-1 text-light mb-0">03</h1>
+                        </div>
+                        <h5>Consultation Gratuite</h5>
+                    </div>
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                                <i class="fa fa-headphones fa-2x" style="color: #009540;"></i>
+                            </div>
+                            <h1 class="display-1 text-light mb-0">04</h1>
+                        </div>
+                        <h5>satisfaction client</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature Start -->
+
+
+
+        <!-- About Start -->
+        <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+            <div class="container about px-lg-0">
+                <div class="row g-0 mx-lg-0">
+                    <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/about.jpg' %}" style="object-fit: cover;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="p-lg-5 pe-lg-0">
+                            <div  id="Apropos" class="section-title text-start">
+                                <h1 class="display-5 mb-4" style="color: #009540">À Propos de NUMARTIS-CI</h1>
+                            </div>
+                            <p class="mb-4 pb-2" style="color: #000000;">Chez NUMARTIS-CI, votre partenaire de confiance pour la
+                                promotion des métiers artisanaux en Côte d'Ivoire. Nous sommes
+                                dédiés à la valorisation et au soutien des artisans talentueux qui
+                                perpétuent des savoir-faire traditionnels tout en innovant pour
+                                répondre aux besoins modernes.</p>
+                            <div class="row g-4 mb-4 pb-2">
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                            <i class="fa fa-users" style="color: #009540;"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h2 class="mb-1" data-toggle="counter-up" style="color: #1B75BC;">100</h2>
+                                            <p class="fw-medium mb-0" style="color: #000000;">Clients satisfaits </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                            <i class="fa fa-check" style="color: #009540;"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h2 class="mb-1" data-toggle="counter-up" style="color: #1B75BC;">90</h2>
+                                            <p class="fw-medium mb-0"style="color: #000000;">Projets réalisés </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{% url 'devis' %}" class="btn btn-primary py-3 px-5">Obtenir un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Service Start -->
+        <div id="Services" class="container-xxl py-5">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h1 class="display-5 mb-5" style="color: #009540;">SERVICES </h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{% static 'img/TOF1.jpg' %}" alt="">
+                            </div>
+                            <div class="p-4 text-center border border-5 border-light border-top-0">
+                                <h4 class="mb-3">Nettoyage à  domicile
+                                    Votre Partenaire de Confiance 24h/24</h4>
+                                <p>Le nettoyage à domicile, nous offrons un service de haute qualité et professionnel. Disponible 24h/24,
+                                    notre équipe dédiée est là pour répondre à tous vos besoins de nettoyage et d'entretien..</p>
+                                <a href="{% url 'devis' %}" class="btn btn-primary py-2 px-5" style="border-radius:50px; float: left; margin-right: 30px; ">Obtenir un devis</a>
+                                <a class="fw-medium" href="{% url 'services' %}" style="color: #1B75BC;">
+                                    En savoir plus<i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{% static 'img/TOF2.jpg' %}" alt="">
+                            </div>
+                            <div class="p-4 text-center border border-5 border-light border-top-0">
+                                <h4 class="mb-3">Mécanique Expert 24h/24</h4>
+                                <p>Avec plus de 10 ans d'expérience en mécanique, nous offrons un service professionnel et de qualité. Disponible 24h/24, notre équipe est là pour vous satisfaire pleinement...</p>
+                                <a href="{% url 'devis' %}" class="btn btn-primary py-2 px-5" style="border-radius:50px; float: left; margin-right: 30px; ">Obtenir un devis</a>
+                                <a class="fw-medium" href="{% url 'services' %}" style="color: #1B75BC;">
+                                    En savoir plus<i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{% static 'img/TOF4.jpg' %}" alt="">
+                            </div>
+                            <div class="p-4 text-center border border-5 border-light border-top-0">
+                                <h4 class="mb-3">Artisan Menuisier : Expertise et Disponibilité 24h/24</h4>
+                                <p>notre équipe dédiée est là pour répondre à tous vos besoins en matière de menuiserie et d'aménagement.</p>
+                                <a href="{% url 'devis' %}" class="btn btn-primary py-2 px-5" style="border-radius:50px; float: left; margin-right: 30px; ">Obtenir un devis</a>
+                                <a class="fw-medium" href="{% url 'services' %}" style="color: #1B75BC;">
+                                    En savoir plus<i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Feature Start -->
+        <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+            <div class="container feature px-lg-0">
+                <div class="row g-0 mx-lg-0">
+                    <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="p-lg-5 ps-lg-0">
+                            <div class="section-title text-start">
+                                <h1 class="display-5 mb-4">Pourquoi Nous Choisi </h1>
+                            </div>
+                            <p class="mb-4 pb-2" style="color: black;">Fondée par une équipe passionnée de jeunes talents,
+                                NUMARTIS-CI s'efforce de transformer le  secteur
+                                artisanal en Côte d'Ivoire. Notre vision est de devenir
+                                un leader incontesté dans  l'intégration des artisans
+                                dans l'économie formelle en utilisant des
+                                technologies de pointe pour  faciliter leur mise en
+                                relation avec les clients.</p>
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                            <i class="fa fa-check" style="color: #009540;"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="mb-2" style="color: black;">Qualité</p>
+                                            <h5 class="mb-0" style="color: black;">Services</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                            <i class="fa fa-user-check" style="color: #009540;"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="mb-2" style="color: black" > Creative </p>
+                                            <h5 class="mb-0" style="color: black" >Designers</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                            <i class="fa fa-drafting-compass"style="color: #009540;"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="mb-2" style="color: black">Gratuite</p>
+                                            <h5 class="mb-0"style="color: black" >Consultation</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                            <i class="fa fa-headphones" style="color: #009540;" ></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="mb-2" style="color: black">Client</p>
+                                            <h5 class="mb-0" style="color: black">Support</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/TOFDEVIS.jpg' %}" style="object-fit: cover;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+        
+        <!-- Projects Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h1 class="display-5 mb-5" style="color: #009540;">COMMENT CELA FONCTIONNE T-IL ?</h1>
+                </div>
+                <div class="row g-4 portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/recherche.png' %}" alt="Image 1" style="max-width: 50%; height: auto; margin: 0 auto;">
+                            </div>
+                            <div class="border border-5 border-light border-top-0 p-4">
+                                <p class="text-primary fw-medium mb-2">CHOISISSEZ VOTRE ARTISAN</p>     
+                                <h5 class="lh-base mb-0">Selon prix, avis, réactivité et proximité</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/calendrier.png' %}" alt="Image 2" style="max-width: 50%; height: auto; margin: 0 auto;">
+                            </div>
+                            <div class="border border-5 border-light border-top-0 p-4">
+                                <p class="text-primary fw-medium mb-2">RÉSERVEZ</p>
+                                <h5 class="lh-base mb-0">En ligne votre artisan. Votre rendez-vous garanti.</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/bien.png' %}" alt="Image 3" style="max-width: 50%; height: auto; margin: 0 auto;">
+                            </div>
+                            <div class="border border-5 border-light border-top-0 p-4">
+                                <p class="text-primary fw-medium mb-2">VOS TRAVAUX SONT NICKEL</p>
+                                <h5 class="lh-base mb-0">C'est vous qui validez le versement à votre artisan.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h1 class="display-5 mb-5" style="color: #009540;">C'EST QUOI LE PACK CONFIANCE NUMARTIS-CI ?</h1>
+                </div>
+        
+                <div class="row g-4 portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid reduced-size" src="{% static 'img/confiance.png' %}" alt="Image 1">
+                            </div>
+                            <div class="border border-5 border-light border-top-0 p-4">
+                                <p class="text-primary fw-medium mb-2">LE PRIX FIXE, CONNU À L'AVANCE</p>
+                                <h5 class="lh-base mb-0">Pack travaux tout compris</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid reduced-size" src="{% static 'img/cotravail.png' %}" alt="Image 2">
+                            </div>
+                            <div class="border border-5 border-light border-top-0 p-4">
+                                <p class="text-primary fw-medium mb-2">RÉSERVEZ</p>
+                                <h5 class="lh-base mb-0">L'ÉQUIPE ULTRA-RÉACTIVE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid reduced-size" src="{% static 'img/mode-de-paiement.png' %}" alt="Image 3">
+                            </div>
+                            <div class="border border-5 border-light border-top-0 p-4">
+                                <p class="text-primary fw-medium mb-2">LE PAIEMENT VERSÉ APRÈS TRAVAUX</p>
+                                <h5 class="lh-base mb-0">C'est vous qui validez le paiement à l'artisan à la fin des travaux.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projects End -->
+
+
+        <!-- Quote Start -->
+
+        <!-- Quote End -->
+
+    {% endblock %}
+
+
+
+    
